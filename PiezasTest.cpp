@@ -29,7 +29,7 @@ TEST(PiezasTest, drop_piece_check1)
 {
 	Piezas obj;
 	Piece piece1 = obj.dropPiece(0);
-	ASSERT_EQ(Blank, piece1);
+	ASSERT_EQ(X, piece1);
 
 }
 // TEST(PiezasTest, drop_piece_check1)
