@@ -59,13 +59,13 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    for (int i = 0; i < board.size(); i++) {
-        for (int j = 0; j < board[i].size(); j++) {
-            cout << board[i][j] << ' ';
-        }
-        cout << endl;
-    }
-    cout << endl;
+    // for (int i = 0; i < board.size(); i++) {
+    //     for (int j = 0; j < board[i].size(); j++) {
+    //         cout << board[i][j] << ' ';
+    //     }
+    //     cout << endl;
+    // }
+    // cout << endl;
 
 
     if (column > 3 || column < 0) {
@@ -79,11 +79,10 @@ Piece Piezas::dropPiece(int column)
         return Invalid;
     }
     for (int i = 2; i >= 0; i--) {
-        cout << "TURN: " << turn << endl;
-            if (turn == X ) {
-            //&& board[i][column] == Blank) {
+        //cout << "TURN: " << turn << endl;
+            if (turn == X && board[i][column] == Blank) {
                 //if (turn == X ) {
-                    cout << "board: " << board[i][column] << endl;
+                    //cout << "board: " << board[i][column] << endl;
                     board[i][column] = X;
                     //return board[i][column];
                     //turn = O;
@@ -105,7 +104,6 @@ Piece Piezas::dropPiece(int column)
             // }
 
     }
-
     return X;
     turn = O;
     //return Blank;
