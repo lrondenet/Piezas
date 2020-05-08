@@ -25,7 +25,6 @@ using namespace std;
 **/
 Piezas::Piezas()
 {
-    Piezas piece;
     //init board
     board.resize(3, vector<Piece>(4));
     //cout << "X turn first" << endl;
@@ -55,6 +54,8 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
+    Piezas piece;
+    piece.reset();
     for (int i = 2; i >= 0; i--) {
         cout << "TURN: " << turn << endl;
             if (turn == X ) {
