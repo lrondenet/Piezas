@@ -31,8 +31,7 @@ TEST(PiezasTest, drop_piece_check)
 {
 	Piezas obj;
 	obj.dropPiece(0);
-
-	// obj.dropPiece(1);
+	obj.dropPiece(1);
 	// obj.dropPiece(2);
 	// obj.dropPiece(3);
 	// obj.dropPiece(0);
@@ -68,7 +67,7 @@ TEST(PiezasTest, out_of_bounds1)
 TEST(PiezasTest, out_of_bounds2)
 {
 	Piezas obj;
-	int out_of_bounds = obj.pieceAt(-1,-2);
+	Piece out_of_bounds = obj.pieceAt(-1,-2);
 	ASSERT_EQ(Invalid, out_of_bounds);
 }
 
@@ -76,13 +75,15 @@ TEST(PiezasTest, out_of_bounds2)
 TEST(PiezasTest, pieceAt_checkX)
 {
 	Piezas obj;
-	obj.pieceAt(2,0);
+	Piece piece = obj.pieceAt(2,0);
+	ASSERT_EQ(X, piece);
 }
 
 TEST(PiezasTest, pieceAt_checkO)
 {
 	Piezas obj;
-	obj.pieceAt(2,1);
+	Piece piece = obj.pieceAt(2,1);
+	ASSERT_EQ(O, piece);
 }
 
 
