@@ -27,7 +27,7 @@ Piezas::Piezas()
 {
     //init board
     board.resize(3, vector<Piece>(4));
-    cout << "X turn first" << endl;
+    //cout << "X turn first" << endl;
     turn = X;
 }
 

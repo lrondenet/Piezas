@@ -54,13 +54,15 @@ TEST(PiezasTest, neg_num)
 TEST(PiezasTest, out_of_bounds1)
 {
 	Piezas obj;
-	obj.pieceAt(3,4);
+	int out_of_bounds = obj.pieceAt(3,4);
+	ASSET_EQ(Invalid, out_of_bounds);
 }
 
 TEST(PiezasTest, out_of_bounds2)
 {
 	Piezas obj;
-	obj.pieceAt(-1,-2);
+	int out_of_bounds = obj.pieceAt(-1,-2);
+	ASSET_EQ(Invalid, out_of_bounds);
 }
 
 
