@@ -3,6 +3,8 @@
 **/
 
 #include <gtest/gtest.h>
+#include <iostream>
+using namespace std;
 #include "Piezas.h"
  
 class PiezasTest : public ::testing::Test
