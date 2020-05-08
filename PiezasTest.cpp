@@ -30,8 +30,10 @@ TEST(PiezasTest, resetboardCheck)
 TEST(PiezasTest, drop_piece_check1)
 {
 	Piezas obj;
-	Piece piece = obj.dropPiece(0);
-	ASSERT_EQ(Blank, piece);
+	Piece piece1 = obj.dropPiece(0);
+	ASSERT_EQ(Blank, piece1);
+	Piece piece2 = obj.dropPiece(0)
+	ASSERT_EQ(X, piece2);
 
 
 }
