@@ -37,8 +37,8 @@ Piezas::Piezas()
 **/
 void Piezas::reset()
 {
-    for (int i = 0; i < board.size(); i++) {
-        for (int j = 0; j < board[i].size(); j++) {
+    for (int i = 0; i < (int)board.size(); i++) {
+        for (int j = 0; j < (int)board[i].size(); j++) {
             board[i][j] = Blank;
         }
     }
@@ -96,9 +96,9 @@ Piece Piezas::dropPiece(int column)
 Piece Piezas::pieceAt(int row, int column)
 {
     
-    if (board[row][column] == Blank) {
-        return Blank;
-    }
+    // if (board[row][column] == Blank) {
+
+    // }
     if (row > 2 || row < 0) {
         return Invalid;
     }
@@ -111,6 +111,7 @@ Piece Piezas::pieceAt(int row, int column)
     if (board[row][column] == O) {
         return O;
     }
+    return Blank;
 }
 
 /**
@@ -327,8 +328,8 @@ Piece Piezas::gameState()
     if (winner_O > winner_X) {
         return O;
     }
-    if (winner_X == winner_O) {
-        return Blank;
-    }
+    //if (winner_X == winner_O) {
+    return Blank;
+    //}
 
 }
