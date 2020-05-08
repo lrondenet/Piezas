@@ -3,8 +3,6 @@
 **/
 
 #include <gtest/gtest.h>
-#include <iostream>
-using namespace std;
 #include "Piezas.h"
  
 class PiezasTest : public ::testing::Test
@@ -32,15 +30,6 @@ TEST(PiezasTest, drop_piece_check1)
 	Piezas obj;
 	Piece piece1 = obj.dropPiece(0);
 	ASSERT_EQ(Blank, piece1);
-
-}
-TEST(PiezasTest, drop_piece_check2)
-{
-	Piezas obj;
-	Piece piece1 = obj.dropPiece(0);
-	if (board[2][0] == X) {
-		cout <<  "yes " << endl;
-	}
 
 }
 // TEST(PiezasTest, drop_piece_check1)
