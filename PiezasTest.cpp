@@ -25,48 +25,49 @@ TEST(PiezasTest, resetboardCheck)
 	obj.reset();
 }
 
-TEST(PiezasTest, drop_piece_check1)
-{
-	Piezas obj;
-	Piece piece1 = obj.dropPiece(0);
-	ASSERT_EQ(X, piece1);
+// TEST(PiezasTest, drop_piece_check1)
+// {
+// 	Piezas obj;
+// 	Piece piece1 = obj.dropPiece(0);
+// 	ASSERT_EQ(X, piece1);
 
-}
+// }
 
-TEST(PiezasTest, drop_piece_check2)
-{
-	Piezas obj;
-	Piece piece2 = obj.dropPiece(1);
-	ASSERT_EQ(O, piece2);
-}
+// TEST(PiezasTest, drop_piece_check2)
+// {
+// 	Piezas obj;
+// 	Piece piece2 = obj.dropPiece(1);
+// 	ASSERT_EQ(O, piece2);
+// }
 
-TEST(PiezasTest, drop_piece_checkX)
-{
-	Piezas obj;
-	obj.dropPiece(0);
-}
-TEST(PiezasTest, drop_piece_checkO)
-{
-	Piezas obj;
-	obj.dropPiece(1);
-}
-// TEST(PiezasTest, fill_board)
+// TEST(PiezasTest, drop_piece_checkX)
 // {
 // 	Piezas obj;
 // 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-
 // }
+// TEST(PiezasTest, drop_piece_checkO)
+// {
+// 	Piezas obj;
+// 	obj.dropPiece(1);
+// }
+
+TEST(PiezasTest, fill_board)
+{
+	Piezas obj;
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+
+}
 
 TEST(PiezasTest, greaterthan_num)
 {
