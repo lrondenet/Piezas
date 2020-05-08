@@ -56,16 +56,13 @@ Piece Piezas::dropPiece(int column)
 {
     for (int i = 2; i >= 0; i--) {
         cout << "TURN: " << turn << endl;
-            if (turn == X && board[i][column] == Blank) {
+            if (turn == X ) {
+            //&& board[i][column] == Blank) {
                 //if (turn == X ) {
-                    cout << board[i][column] << endl;
+                    cout << "board: " << board[i][column] << endl;
                     board[i][column] = X;
                     //return board[i][column];
                     //turn = O;
-                //}
-                // if (turn == O) {
-
-                // }
 
             }
             // if (turn == O && board[i][column] == Blank) {
