@@ -54,7 +54,6 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    Piece position;
     if (column > 3 || column < 0) {
          //lose turn
         if (turn == X) {
@@ -67,13 +66,13 @@ Piece Piezas::dropPiece(int column)
     }
     for (int i = 2; i >= 0; i--) {
             if (turn == X && board[i][column] == Blank) {
-                position = board[i][column];
-                return position;
+                board[i][column] = X;
+                return X;
                 turn = O;
             }
             if (turn == O && board[i][column] == Blank) {
-                position = board[i][column];
-                return position;
+                board[i][column] = O;
+                return O;
                 turn = X;
             }
             if (board[i][column] == X || O) {

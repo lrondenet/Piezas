@@ -27,23 +27,31 @@ TEST(PiezasTest, resetboardCheck)
 	obj.reset();
 }
 
-TEST(PiezasTest, drop_piece_check)
+TEST(PiezasTest, drop_piece_check1)
 {
 	Piezas obj;
-	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
-	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
-	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
+	Piece piece = obj.dropPiece(0);
+	ASSERT_EQ(X, piece);
+
 
 }
+// TEST(PiezasTest, drop_piece_check1)
+// {
+// 	Piezas obj;
+// 	obj.dropPiece(0);
+// 	obj.dropPiece(1);
+// 	obj.dropPiece(2);
+// 	obj.dropPiece(3);
+// 	obj.dropPiece(0);
+// 	obj.dropPiece(1);
+// 	obj.dropPiece(2);
+// 	obj.dropPiece(3);
+// 	obj.dropPiece(0);
+// 	obj.dropPiece(1);
+// 	obj.dropPiece(2);
+// 	obj.dropPiece(3);
+
+// }
 
 TEST(PiezasTest, greaterthan_num)
 {
@@ -72,19 +80,19 @@ TEST(PiezasTest, out_of_bounds2)
 }
 
 
-TEST(PiezasTest, pieceAt_checkX)
-{
-	Piezas obj;
-	Piece piece = obj.pieceAt(2,0);
-	ASSERT_EQ(X, piece);
-}
+// TEST(PiezasTest, pieceAt_checkX)
+// {
+// 	Piezas obj;
+// 	Piece piece = obj.pieceAt(2,0);
+// 	ASSERT_EQ(X, piece);
+// }
 
-TEST(PiezasTest, pieceAt_checkO)
-{
-	Piezas obj;
-	Piece piece = obj.pieceAt(2,1);
-	ASSERT_EQ(O, piece);
-}
+// TEST(PiezasTest, pieceAt_checkO)
+// {
+// 	Piezas obj;
+// 	Piece piece = obj.pieceAt(2,1);
+// 	ASSERT_EQ(O, piece);
+// }
 
 
 
