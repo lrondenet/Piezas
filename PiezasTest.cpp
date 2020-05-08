@@ -31,10 +31,10 @@ TEST(PiezasTest, drop_piece_check1)
 {
 	Piezas obj;
 	Piece piece1 = obj.dropPiece(0);
-	ASSERT_EQ(Blank, piece1);
-	Piece piece2 = obj.dropPiece(0)
-	ASSERT_EQ(X, piece2);
-
+	if (ASSERT_EQ(Blank, piece1)) {
+		Piece piece2 = obj.dropPiece(0);
+		ASSERT_EQ(X, piece2);
+	}
 
 }
 // TEST(PiezasTest, drop_piece_check1)
