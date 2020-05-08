@@ -67,7 +67,6 @@ Piece Piezas::dropPiece(int column)
     // }
     // cout << endl;
 
-
     if (column > 3 || column < 0) {
          //lose turn
         if (turn == X) {
@@ -81,32 +80,28 @@ Piece Piezas::dropPiece(int column)
     for (int i = 2; i >= 0; i--) {
         //cout << "TURN: " << turn << endl;
             if (turn == X && board[i][column] == Blank) {
-                //if (turn == X ) {
-                    //cout << "board: " << board[i][column] << endl;
                     board[i][column] = X;
-                    //return board[i][column];
-                    //turn = O;
+                    return X;
+                    turn = O;
 
             }
-            // if (turn == O && board[i][column] == Blank) {
-            //     board[i][column] = O;
-            //     return board[i][column];
-            //     turn = X;
-            // }
-            // if (board[i][column] == X || O) {
-            //     //piece already there and lose turn
-            //     if (turn == X) {
-            //         turn = O;
-            //     }
-            //     if (turn == O) {
-            //         turn = X;
-            //     }
-            // }
+            if (turn == O && board[i][column] == Blank) {
+                board[i][column] = O;
+                return board[i][column];
+                turn = X;
+            }
+            if (board[i][column] == X || O) {
+                //piece already there and lose turn
+                if (turn == X) {
+                    turn = O;
+                }
+                if (turn == O) {
+                    turn = X;
+                }
+            }
 
     }
-    return X;
-    turn = O;
-    //return Blank;
+    return Blank;
 }
 
 /**
