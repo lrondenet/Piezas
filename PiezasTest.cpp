@@ -24,7 +24,8 @@ TEST(PiezasTest, sanityCheck)
 TEST(PiezasTest, resetboardCheck)
 {
 	Piezas obj;
-	obj.reset();
+	Piece piece = obj.reset();
+	ASSERT_EQ(Blank, piece);
 }
 
 TEST(PiezasTest, drop_piece_check)
@@ -32,16 +33,16 @@ TEST(PiezasTest, drop_piece_check)
 	Piezas obj;
 	obj.dropPiece(0);
 	obj.dropPiece(1);
-	// obj.dropPiece(2);
-	// obj.dropPiece(3);
-	// obj.dropPiece(0);
-	// obj.dropPiece(1);
-	// obj.dropPiece(2);
-	// obj.dropPiece(3);
-	// obj.dropPiece(0);
-	// obj.dropPiece(1);
-	// obj.dropPiece(2);
-	// obj.dropPiece(3);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
 
 }
 
