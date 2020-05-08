@@ -3,8 +3,8 @@
 **/
 
 #include <gtest/gtest.h>
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 #include "Piezas.h"
  
 class PiezasTest : public ::testing::Test
@@ -25,24 +25,24 @@ TEST(PiezasTest, resetboardCheck)
 {
 	Piezas obj;
 	obj.reset();
-
 }
 
 TEST(PiezasTest, drop_piece_check)
 {
 	Piezas obj;
 	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
-	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
-	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
+
+	// obj.dropPiece(1);
+	// obj.dropPiece(2);
+	// obj.dropPiece(3);
+	// obj.dropPiece(0);
+	// obj.dropPiece(1);
+	// obj.dropPiece(2);
+	// obj.dropPiece(3);
+	// obj.dropPiece(0);
+	// obj.dropPiece(1);
+	// obj.dropPiece(2);
+	// obj.dropPiece(3);
 
 }
 
@@ -61,7 +61,7 @@ TEST(PiezasTest, neg_num)
 TEST(PiezasTest, out_of_bounds1)
 {
 	Piezas obj;
-	int out_of_bounds = obj.pieceAt(3,4);
+	Piece out_of_bounds = obj.pieceAt(3,4);
 	ASSERT_EQ(Invalid, out_of_bounds);
 }
 
