@@ -27,6 +27,11 @@ Piezas::Piezas()
 {
     //init board
     board.resize(3, vector<Piece>(4));
+    for (int i = 0; i < (int)board.size(); i++) {
+        for (int j = 0; j < (int)board[i].size(); j++) {
+            board[i][j] = Blank;
+        }
+    }
     //cout << "X turn first" << endl;
     turn = X;
 }
@@ -54,8 +59,25 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    Piezas piece;
-    piece.reset();
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board[i].size(); j++) {
+            cout << board[i][j] << ' ';
+        }
+        cout << endl;
+    }
+    cout << endl;
+
+
+    if (column > 3 || column < 0) {
+         //lose turn
+        if (turn == X) {
+            turn = O;
+        }
+        if (turn == O) {
+            turn = X;
+        }
+        return Invalid;
+    }
     for (int i = 2; i >= 0; i--) {
         cout << "TURN: " << turn << endl;
             if (turn == X ) {
@@ -83,16 +105,7 @@ Piece Piezas::dropPiece(int column)
             // }
 
     }
-    if (column > 3 || column < 0) {
-         //lose turn
-        if (turn == X) {
-            turn = O;
-        }
-        if (turn == O) {
-            turn = X;
-        }
-        return Invalid;
-    }
+
     return X;
     turn = O;
     //return Blank;
