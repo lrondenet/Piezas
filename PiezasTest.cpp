@@ -32,7 +32,25 @@ TEST(PiezasTest, drop_piece_check1)
 	ASSERT_EQ(X, piece1);
 
 }
-// TEST(PiezasTest, drop_piece_check1)
+
+TEST(PiezasTest, drop_piece_check2)
+{
+	Piezas obj;
+	Piece piece2 = obj.dropPiece(1);
+	ASSERT_EQ(O, piece2);
+}
+
+TEST(PiezasTest, drop_piece_checkX)
+{
+	Piezas obj;
+	obj.dropPiece(0);
+}
+TEST(PiezasTest, drop_piece_checkO)
+{
+	Piezas obj;
+	obj.dropPiece(1);
+}
+// TEST(PiezasTest, fill_board)
 // {
 // 	Piezas obj;
 // 	obj.dropPiece(0);
