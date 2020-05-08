@@ -24,8 +24,7 @@ TEST(PiezasTest, sanityCheck)
 TEST(PiezasTest, resetboardCheck)
 {
 	Piezas obj;
-	Piece piece = obj.reset();
-	ASSERT_EQ(Blank, piece);
+	obj.reset();
 }
 
 TEST(PiezasTest, drop_piece_check)
