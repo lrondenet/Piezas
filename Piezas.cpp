@@ -25,8 +25,10 @@ using namespace std;
 **/
 Piezas::Piezas()
 {
+    Piezas piece;
     //init board
     board.resize(3, vector<Piece>(4));
+    piece.reset();
     //cout << "X turn first" << endl;
     turn = X;
 }
