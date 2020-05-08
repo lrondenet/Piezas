@@ -18,3 +18,13 @@ TEST(PiezasTest, sanityCheck)
 {
 	ASSERT_TRUE(true);
 }
+
+// TEST(PiezasTest, boardCheck)
+// {
+
+// 	Piezas obj;
+	
+
+
+// }
+
