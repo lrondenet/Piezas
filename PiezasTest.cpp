@@ -21,6 +21,13 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
+TEST(PiezasTest, resetboardCheck)
+{
+	Piezas obj;
+	obj.reset();
+
+}
+
 TEST(PiezasTest, drop_piece_check)
 {
 	Piezas obj;
@@ -55,14 +62,14 @@ TEST(PiezasTest, out_of_bounds1)
 {
 	Piezas obj;
 	int out_of_bounds = obj.pieceAt(3,4);
-	ASSET_EQ(Invalid, out_of_bounds);
+	ASSERT_EQ(Invalid, out_of_bounds);
 }
 
 TEST(PiezasTest, out_of_bounds2)
 {
 	Piezas obj;
 	int out_of_bounds = obj.pieceAt(-1,-2);
-	ASSET_EQ(Invalid, out_of_bounds);
+	ASSERT_EQ(Invalid, out_of_bounds);
 }
 
 
