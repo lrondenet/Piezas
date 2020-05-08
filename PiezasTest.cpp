@@ -23,7 +23,25 @@ TEST(PiezasTest, drop_piece_check)
 {
 
 	Piezas obj;
-	obj.dropPiece(2);
+	int ret = obj.dropPiece(2);
+	cout << ret << endl;
 
 }
+
+TEST(PiezasTest, greaterthan_num)
+{
+
+	Piezas obj;
+	obj.dropPiece(4);
+
+}
+
+TEST(PiezasTest, neg_num)
+{
+
+	Piezas obj;
+	obj.dropPiece(4);
+
+}
+
 
