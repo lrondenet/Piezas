@@ -69,27 +69,30 @@ Piece Piezas::dropPiece(int column)
             if (board[i][column] == Blank) {
                 if (turn == X ) {
                     board[i][column] = X;
-                    return board[i][column];
-                    turn = O;
+                    //return board[i][column];
+                    //turn = O;
                 }
 
             }
-            if (turn == O && board[i][column] == Blank) {
-                board[i][column] = O;
-                return board[i][column];
-                turn = X;
-            }
-            if (board[i][column] == X || O) {
-                //piece already there and lose turn
-                if (turn == X) {
-                    turn = O;
-                }
-                if (turn == O) {
-                    turn = X;
-                }
-            }
+            // if (turn == O && board[i][column] == Blank) {
+            //     board[i][column] = O;
+            //     return board[i][column];
+            //     turn = X;
+            // }
+            // if (board[i][column] == X || O) {
+            //     //piece already there and lose turn
+            //     if (turn == X) {
+            //         turn = O;
+            //     }
+            //     if (turn == O) {
+            //         turn = X;
+            //     }
+            // }
+
     }
-    return Blank;
+    return X;
+    turn = O;
+    //return Blank;
 }
 
 /**
