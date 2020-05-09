@@ -41,22 +41,22 @@ TEST(PiezasTest, drop_piece_check1)
 // }
 
 
-// TEST(PiezasTest, fill_board)
-// {
-// 	Piezas obj;
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-// }
+TEST(PiezasTest, fill_board)
+{
+	Piezas obj;
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+}
 
 TEST(PiezasTest, column_full) {
 	Piezas obj;
@@ -102,9 +102,10 @@ TEST(PiezasTest, pieceAt_checkX)
 TEST(PiezasTest, pieceAt_checkO)
 {
 	Piezas obj;
+	obj.dropPiece(0);
 	obj.dropPiece(1);
 	Piece piece = obj.pieceAt(2,1);
-	//ASSERT_EQ(O, piece);
+	ASSERT_EQ(O, piece);
 }
 
 TEST(PiezasTest, pieceAt_check1)
@@ -120,6 +121,13 @@ TEST(PiezasTest, pieceAt_check2)
 	Piezas obj;
 	obj.dropPiece(1);
 	Piece piece = obj.pieceAt(2,2);
+	//ASSERT_EQ(O, piece);
+}
+
+TEST(PiezasTest, gameState)
+{
+	Piezas obj;
+	obj.gameState();
 	//ASSERT_EQ(O, piece);
 }
 
