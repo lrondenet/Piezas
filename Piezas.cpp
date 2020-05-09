@@ -74,14 +74,14 @@ Piece Piezas::dropPiece(int column)
         //cout << "TURN: " << turn << endl;
         if (turn == X && board[i][column] == Blank) {
             board[i][column] = X;
-            return X;
             turn = O;
+            return X;
         }
         cout << "TURN: " << turn << endl;
         if (turn == O && board[i][column] == Blank) {
             board[i][column] = O;
-            return O;
             turn = X;
+            return O;
         }
         if (board[i][column] == X || O) {
             //piece already there and lose turn
