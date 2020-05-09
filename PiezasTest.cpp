@@ -86,7 +86,7 @@ TEST(PiezasTest, out_of_bounds1)
 TEST(PiezasTest, out_of_bounds2)
 {
 	Piezas obj;
-	Piece out_of_bounds = obj.pieceAt(-1,-2);
+	Piece out_of_bounds = obj.pieceAt(-1,4);
 	ASSERT_EQ(Invalid, out_of_bounds);
 }
 
@@ -127,8 +127,19 @@ TEST(PiezasTest, pieceAt_check2)
 TEST(PiezasTest, gameState)
 {
 	Piezas obj;
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
 	obj.gameState();
-	//ASSERT_EQ(O, piece);
 }
 
 
