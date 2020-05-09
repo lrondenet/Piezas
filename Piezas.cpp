@@ -82,15 +82,16 @@ Piece Piezas::dropPiece(int column)
             turn = X;
             return O;
         }
-        //cout << board[i][column] << endl;
-        if ((board[i][column] == X) || (board[i][column] == O)) {
-            //piece already there and lose turn
+    }
+    for (int j = 0; j < 4; j++) {
+        if (board[0][j] == X || board[0][j] == O) {
+        //piece already there and lose turn
             if (turn == X) {
                 turn = O;
             }
             if (turn == O) {
                 turn = X;
-            }
+            }   
         }
     }
     return Blank;
@@ -137,7 +138,7 @@ Piece Piezas::gameState()
         cout << endl;
     }
     cout << endl;
-    
+
     for (int i = 2; i >= 0; i--) {
         for (int j = 0; j < 4; j++) {
             if (board[i][j] == Blank) {
