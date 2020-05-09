@@ -220,6 +220,25 @@ TEST(PiezasTest, gameState_four)
 
 }
 
+TEST(PiezasTest, gameState_five)
+{
+	Piezas obj;
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(0);
+	obj.dropPiece(2);
+	obj.dropPiece(0);
+	obj.dropPiece(3);
+	obj.gameState();
+
+}
+
 
 
 
