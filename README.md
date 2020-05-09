@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/lrondenet/Piezas.svg?branch=master)](https://travis-ci.com/lrondenet/Piezas)
 
-
+[![Coverage Status](https://coveralls.io/repos/github/lrondenet/Piezas/badge.svg)](https://coveralls.io/github/lrondenet/Piezas)
 
 ## Associated Enumerated Types
 `Piece` has four possible values: `X`,`O`,`Invalid`, and `Blank`

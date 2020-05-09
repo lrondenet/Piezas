@@ -342,8 +342,6 @@ Piece Piezas::gameState()
     if (winner_O > winner_X) {
         return O;
     }
-    //if (winner_X == winner_O) {
     return Blank;
-    //}
 
 }

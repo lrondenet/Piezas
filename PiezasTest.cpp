@@ -213,10 +213,9 @@ TEST(PiezasTest, gameState_four)
 	obj.dropPiece(1);
 	obj.dropPiece(1);
 	obj.dropPiece(3);
-	// obj.dropPiece(1);
-	// obj.dropPiece(3);
-	// obj.dropPiece(3);
-	// obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
 	obj.gameState();
 
 }
