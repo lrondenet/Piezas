@@ -145,7 +145,7 @@ TEST(PiezasTest, empty_gameState)
 }
 
 
-TEST(PiezasTest, gameState_equal)
+TEST(PiezasTest, gameState_one)
 {
 	Piezas obj;
 	obj.dropPiece(0);
@@ -161,6 +161,25 @@ TEST(PiezasTest, gameState_equal)
 	obj.dropPiece(2);
 	obj.dropPiece(3);
 	obj.gameState();
+}
+
+TEST(PiezasTest, gameState_equal)
+{
+	Piezas obj;
+	obj.dropPiece(3);
+	obj.dropPiece(2);
+	obj.dropPiece(1);
+	obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(1);
+	obj.dropPiece(30);
+	obj.gameState();
+
 }
 
 
