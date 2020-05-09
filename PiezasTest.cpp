@@ -94,6 +94,7 @@ TEST(PiezasTest, out_of_bounds2)
 TEST(PiezasTest, pieceAt_checkX)
 {
 	Piezas obj;
+	obj.dropPiece(0);
 	Piece piece = obj.pieceAt(2,0);
 	ASSERT_EQ(X, piece);
 }
