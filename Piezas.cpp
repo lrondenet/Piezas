@@ -92,7 +92,6 @@ Piece Piezas::dropPiece(int column)
                 turn = X;
             }
         }
-
     }
     return Blank;
 }

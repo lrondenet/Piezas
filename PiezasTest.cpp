@@ -67,12 +67,13 @@ TEST(PiezasTest, fill_board)
 	obj.dropPiece(2);
 	obj.dropPiece(3);
 }
-// TEST(PiezasTest, column_full) {
-// 	Piezas obj;
-// 	Piece piece = obj.dropPiece(0);
-// 	ASSERT_EQ(Blank, piece);
 
-// }
+TEST(PiezasTest, column_full) {
+	Piezas obj;
+	Piece piece = obj.dropPiece(0);
+	ASSERT_EQ(Blank, piece);
+
+}
 
 TEST(PiezasTest, greaterthan_num)
 {
