@@ -131,13 +131,13 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
-    // for (int i = 0; i < board.size(); i++) {
-    //     for (int j = 0; j < board[i].size(); j++) {
-    //         cout << board[i][j] << ' ';
-    //     }
-    //     cout << endl;
-    // }
-    // cout << endl;
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board[i].size(); j++) {
+            cout << board[i][j] << ' ';
+        }
+        cout << endl;
+    }
+    cout << endl;
 
     for (int i = 2; i >= 0; i--) {
         for (int j = 0; j < 4; j++) {
@@ -287,16 +287,16 @@ Piece Piezas::gameState()
             total_column_X = column_three_count_X;
         }
     }
-    if (column_one_count_O <= column_three_count_O >= column_two_count_O) {
-        if (column_three_count_O >= column_four_count_O) {
-            total_column_O = column_three_count_O;
-        }
-    }
-    if (column_one_count_X <= column_four_count_X >= column_two_count_X) {
-        if (column_four_count_X >= column_three_count_X) {
-            total_column_X = column_four_count_X;
-        }
-    }
+    // if (column_one_count_O <= column_three_count_O >= column_two_count_O) {
+    //     if (column_three_count_O >= column_four_count_O) {
+    //         total_column_O = column_three_count_O;
+    //     }
+    // }
+    // if (column_one_count_X <= column_four_count_X >= column_two_count_X) {
+    //     if (column_four_count_X >= column_three_count_X) {
+    //         total_column_X = column_four_count_X;
+    //     }
+    // }
     if (column_one_count_O <= column_four_count_O >= column_two_count_O) {
         if (column_four_count_O >= column_three_count_O) {
             total_column_O = column_four_count_O;
