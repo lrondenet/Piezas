@@ -27,11 +27,11 @@ Piezas::Piezas()
 {
     //init board
     board.resize(3, vector<Piece> (4));
-    for (int i = 0; i < (int)board.size(); i++) {
-        for (int j = 0; j < (int)board[i].size(); j++) {
-            board[i][j] = Blank;
-        }
-    }
+    // for (int i = 0; i < (int)board.size(); i++) {
+    //     for (int j = 0; j < (int)board[i].size(); j++) {
+    //         board[i][j] = Blank;
+    //     }
+    // }
     turn = X;
 }
 

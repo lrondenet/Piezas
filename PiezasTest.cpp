@@ -19,11 +19,11 @@ TEST(PiezasTest, sanityCheck)
 	ASSERT_TRUE(true);
 }
 
-// TEST(PiezasTest, resetboardCheck)
-// {
-// 	Piezas obj;
-// 	obj.reset();
-// }
+TEST(PiezasTest, resetboardCheck)
+{
+	Piezas obj;
+	obj.reset();
+}
 
 // TEST(PiezasTest, drop_piece_check1)
 // {
