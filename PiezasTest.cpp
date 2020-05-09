@@ -101,12 +101,12 @@ TEST(PiezasTest, out_of_bounds2)
 }
 
 
-TEST(PiezasTest, pieceAt_checkX)
-{
-	Piezas obj;
-	Piece piece = obj.pieceAt(2,0);
-	ASSERT_EQ(X, piece);
-}
+// TEST(PiezasTest, pieceAt_checkX)
+// {
+// 	Piezas obj;
+// 	Piece piece = obj.pieceAt(2,0);
+// 	ASSERT_EQ(X, piece);
+// }
 
 // TEST(PiezasTest, pieceAt_checkO)
 // {

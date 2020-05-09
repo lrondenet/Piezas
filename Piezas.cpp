@@ -94,14 +94,6 @@ Piece Piezas::dropPiece(int column)
         }
 
     }
-    for (int i = 0; i < board.size(); i++) {
-        for (int j = 0; j < board[i].size(); j++) {
-            cout << board[i][j] << ' ';
-        }
-        cout << endl;
-    }
-    cout << endl;
-    
     return Blank;
 }
 
@@ -111,6 +103,14 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board[i].size(); j++) {
+            cout << board[i][j] << ' ';
+        }
+        cout << endl;
+    }
+    cout << endl;
+    
     
     // if (board[row][column] == Blank) {
 
