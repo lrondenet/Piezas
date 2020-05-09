@@ -179,24 +179,24 @@ TEST(PiezasTest, gameState_equal)
 
 }
 
-// TEST(PiezasTest, gameState_two)
-// {
-// 	Piezas obj;
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(0);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-// 	obj.dropPiece(2);
-// 	obj.dropPiece(3);
-// 	obj.dropPiece(1);
-// 	obj.dropPiece(30);
-// 	obj.gameState();
+TEST(PiezasTest, gameState_two)
+{
+	Piezas obj;
+	obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(1);
+	obj.dropPiece(1);
+	obj.dropPiece(1);
+	obj.dropPiece(2);
+	obj.dropPiece(2);
+	obj.dropPiece(2);
+	obj.dropPiece(3);
+	obj.dropPiece(3);
+	obj.dropPiece(3);
+	obj.gameState();
 
-// }
+}
 
 
 

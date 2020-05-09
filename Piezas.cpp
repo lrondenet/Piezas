@@ -167,13 +167,13 @@ Piece Piezas::gameState()
             row_two_count_X++;
         }
         if (board[1][j] == O) {
-        row_two_count_O++;
+            row_two_count_O++;
         }
         if (board[0][j] == X) {
-        row_three_count_X++;
+            row_three_count_X++;
         }
         if (board[0][j] == O) {
-        row_three_count_O++;
+            row_three_count_O++;
         }
     }
     cout << "ROW ONE COUNT X: " << row_one_count_X << endl;
