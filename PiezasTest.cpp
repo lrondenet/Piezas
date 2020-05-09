@@ -145,7 +145,7 @@ TEST(PiezasTest, empty_gameState)
 }
 
 
-TEST(PiezasTest, gameState)
+TEST(PiezasTest, gameState_equal)
 {
 	Piezas obj;
 	obj.dropPiece(0);
