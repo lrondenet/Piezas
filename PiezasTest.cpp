@@ -33,13 +33,6 @@ TEST(PiezasTest, drop_piece_check1)
 
 }
 
-// TEST(PiezasTest, drop_piece_check2)
-// {
-// 	Piezas obj;
-// 	Piece piece2 = obj.dropPiece(1);
-// 	ASSERT_EQ(O, piece2);
-// }
-
 
 TEST(PiezasTest, fill_board)
 {
@@ -60,9 +53,12 @@ TEST(PiezasTest, fill_board)
 
 TEST(PiezasTest, column_full) {
 	Piezas obj;
-	Piece piece = obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(0);
 
 }
+
 
 TEST(PiezasTest, greaterthan_num)
 {
@@ -141,6 +137,14 @@ TEST(PiezasTest, gameState)
 	obj.dropPiece(3);
 	obj.gameState();
 }
+
+TEST(PiezasTest, empty_gameState)
+{
+	Piezas obj;
+	obj.gameState();
+}
+
+
 
 
 
