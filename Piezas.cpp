@@ -59,13 +59,6 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-    for (int i = 0; i < board.size(); i++) {
-        for (int j = 0; j < board[i].size(); j++) {
-            cout << board[i][j] << ' ';
-        }
-        cout << endl;
-    }
-    cout << endl;
 
     if (column > 3 || column < 0) {
          //lose turn
@@ -79,29 +72,36 @@ Piece Piezas::dropPiece(int column)
     }
     for (int i = 2; i >= 0; i--) {
         //cout << "TURN: " << turn << endl;
-            if (turn == X && board[i][column] == Blank) {
-                    board[i][column] = X;
-                    return X;
-                    turn = O;
-
+        if (turn == X && board[i][column] == Blank) {
+            board[i][column] = X;
+            return X;
+            turn = O;
+        }
+        if (turn == O && board[i][column] == Blank) {
+            board[i][column] = O;
+            return O;
+            turn = X;
+        }
+        if (board[i][column] == X || O) {
+            //piece already there and lose turn
+            if (turn == X) {
+                turn = O;
             }
-            if (turn == O && board[i][column] == Blank) {
-                board[i][column] = O;
-                return board[i][column];
+            if (turn == O) {
                 turn = X;
             }
-            if (board[i][column] == X || O) {
-                //piece already there and lose turn
-                if (turn == X) {
-                    turn = O;
-                }
-                if (turn == O) {
-                    turn = X;
-                }
-            }
+        }
 
     }
     return Blank;
+
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board[i].size(); j++) {
+            cout << board[i][j] << ' ';
+        }
+        cout << endl;
+    }
+    cout << endl;
 }
 
 /**
