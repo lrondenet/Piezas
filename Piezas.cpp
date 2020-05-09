@@ -77,6 +77,7 @@ Piece Piezas::dropPiece(int column)
             return X;
             turn = O;
         }
+        cout << "TURN: " << turn << endl;
         if (turn == O && board[i][column] == Blank) {
             board[i][column] = O;
             return O;
@@ -93,8 +94,6 @@ Piece Piezas::dropPiece(int column)
         }
 
     }
-    return Blank;
-
     for (int i = 0; i < board.size(); i++) {
         for (int j = 0; j < board[i].size(); j++) {
             cout << board[i][j] << ' ';
@@ -102,6 +101,8 @@ Piece Piezas::dropPiece(int column)
         cout << endl;
     }
     cout << endl;
+    
+    return Blank;
 }
 
 /**
