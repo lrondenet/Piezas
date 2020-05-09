@@ -26,7 +26,7 @@ using namespace std;
 Piezas::Piezas()
 {
     //init board
-    board.resize(3, vector<Piece>(4));
+    board.resize(3, vector<Piece> (4));
     for (int i = 0; i < (int)board.size(); i++) {
         for (int j = 0; j < (int)board[i].size(); j++) {
             board[i][j] = Blank;
@@ -77,13 +77,14 @@ Piece Piezas::dropPiece(int column)
             turn = O;
             return X;
         }
-        cout << "TURN: " << turn << endl;
+        //cout << "TURN: " << turn << endl;
         if (turn == O && board[i][column] == Blank) {
             board[i][column] = O;
             turn = X;
             return O;
         }
-        if (board[i][column] == X || O) {
+        cout << board[i][column] << endl;
+        if ((board[i][column] == X) || (board[i][column] == O )) {
             //piece already there and lose turn
             if (turn == X) {
                 turn = O;
@@ -102,13 +103,13 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    for (int i = 0; i < board.size(); i++) {
-        for (int j = 0; j < board[i].size(); j++) {
-            cout << board[i][j] << ' ';
-        }
-        cout << endl;
-    }
-    cout << endl;
+    // for (int i = 0; i < board.size(); i++) {
+    //     for (int j = 0; j < board[i].size(); j++) {
+    //         cout << board[i][j] << ' ';
+    //     }
+    //     cout << endl;
+    // }
+    // cout << endl;
     
     
     // if (board[row][column] == Blank) {
