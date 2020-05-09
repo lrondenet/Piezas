@@ -147,6 +147,8 @@ TEST(PiezasTest, gameState_one)
 	Piezas obj;
 	obj.dropPiece(0);
 	obj.dropPiece(0);
+	obj.dropPiece(0);
+	obj.dropPiece(0);
 	obj.gameState();
 }
 
