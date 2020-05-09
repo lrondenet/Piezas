@@ -40,16 +40,6 @@ TEST(PiezasTest, resetboardCheck)
 // 	ASSERT_EQ(O, piece2);
 // }
 
-// TEST(PiezasTest, drop_piece_checkX)
-// {
-// 	Piezas obj;
-// 	obj.dropPiece(0);
-// }
-// TEST(PiezasTest, drop_piece_checkO)
-// {
-// 	Piezas obj;
-// 	obj.dropPiece(1);
-// }
 
 TEST(PiezasTest, fill_board)
 {
@@ -101,12 +91,12 @@ TEST(PiezasTest, out_of_bounds2)
 }
 
 
-// TEST(PiezasTest, pieceAt_checkX)
-// {
-// 	Piezas obj;
-// 	Piece piece = obj.pieceAt(2,0);
-// 	ASSERT_EQ(X, piece);
-// }
+TEST(PiezasTest, pieceAt_checkX)
+{
+	Piezas obj;
+	Piece piece = obj.pieceAt(2,0);
+	ASSERT_EQ(X, piece);
+}
 
 // TEST(PiezasTest, pieceAt_checkO)
 // {
