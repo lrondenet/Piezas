@@ -239,7 +239,7 @@ TEST(PiezasTest, gameState_five)
 	obj.gameState();
 }
 
-TEST(PiezasTest, gameState_sixe)
+TEST(PiezasTest, gameState_six)
 {
 	Piezas obj;
 	obj.dropPiece(0);

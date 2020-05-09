@@ -333,8 +333,8 @@ Piece Piezas::gameState()
         winner_O = total_row_O;
     }
 
-    // cout << "Winner X: " << winner_X << endl;
-    // cout << "Winner O: " << winner_O << endl;
+    cout << "Winner X: " << winner_X << endl;
+    cout << "Winner O: " << winner_O << endl;
 
     if (winner_X > winner_O) {
         return X;
