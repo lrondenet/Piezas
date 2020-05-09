@@ -107,14 +107,14 @@ TEST(PiezasTest, pieceAt_check1)
 {
 	Piezas obj;
 	obj.dropPiece(1);
-	Piece piece = obj.pieceAt(2,2);
+	obj.pieceAt(2,2);
 }
 
 TEST(PiezasTest, pieceAt_check2)
 {
 	Piezas obj;
 	obj.dropPiece(1);
-	Piece piece = obj.pieceAt(2,2);
+	obj.pieceAt(2,2);
 }
 
 TEST(PiezasTest, gameState)
@@ -147,16 +147,6 @@ TEST(PiezasTest, gameState_one)
 	Piezas obj;
 	obj.dropPiece(0);
 	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
-	obj.dropPiece(3);
-	obj.dropPiece(0);
-	obj.dropPiece(1);
-	obj.dropPiece(2);
-	obj.dropPiece(3);
 	obj.gameState();
 }
 
