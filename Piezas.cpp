@@ -32,7 +32,6 @@ Piezas::Piezas()
             board[i][j] = Blank;
         }
     }
-    //cout << "X turn first" << endl;
     turn = X;
 }
 
@@ -48,6 +47,7 @@ void Piezas::reset()
         }
     }
 }
+
 
 /**
  * Places a piece of the current turn on the board, returns what
@@ -83,7 +83,7 @@ Piece Piezas::dropPiece(int column)
             turn = X;
             return O;
         }
-        cout << board[i][column] << endl;
+        //cout << board[i][column] << endl;
         if ((board[i][column] == X) || (board[i][column] == O)) {
             //piece already there and lose turn
             if (turn == X) {
@@ -103,18 +103,15 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    // for (int i = 0; i < board.size(); i++) {
-    //     for (int j = 0; j < board[i].size(); j++) {
-    //         cout << board[i][j] << ' ';
-    //     }
-    //     cout << endl;
-    // }
-    // cout << endl;
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board[i].size(); j++) {
+            cout << board[i][j] << ' ';
+        }
+        cout << endl;
+    }
+    cout << endl;
     
     
-    // if (board[row][column] == Blank) {
-
-    // }
     if (row > 2 || row < 0) {
         return Invalid;
     }
