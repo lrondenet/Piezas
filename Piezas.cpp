@@ -177,12 +177,12 @@ Piece Piezas::gameState()
             row_three_count_O++;
         }
     }
-    cout << "ROW ONE COUNT X: " << row_one_count_X << endl;
-    cout << "ROW ONE COUNT O: " << row_one_count_O << endl;
-    cout << "ROW TWO COUNT X: " << row_two_count_X << endl;
-    cout << "ROW TWO COUNT O: " << row_two_count_O << endl;
-    cout << "ROW THREE COUNT X: " << row_three_count_X << endl;
-    cout << "ROW THREE COUNT O: " << row_three_count_O << endl;
+    // cout << "ROW ONE COUNT X: " << row_one_count_X << endl;
+    // cout << "ROW ONE COUNT O: " << row_one_count_O << endl;
+    // cout << "ROW TWO COUNT X: " << row_two_count_X << endl;
+    // cout << "ROW TWO COUNT O: " << row_two_count_O << endl;
+    // cout << "ROW THREE COUNT X: " << row_three_count_X << endl;
+    // cout << "ROW THREE COUNT O: " << row_three_count_O << endl;
     if (row_one_count_X >= row_two_count_X && row_one_count_X >= row_three_count_X) {
         total_row_X = row_one_count_X;
     }
@@ -208,8 +208,8 @@ Piece Piezas::gameState()
         total_row_O = row_one_count_O;
     }
 
-    cout << "TOTAL ROW X: " << total_row_X << endl;
-    cout << "TOTAL ROW O: " << total_row_O << endl;
+    // cout << "TOTAL ROW X: " << total_row_X << endl;
+    // cout << "TOTAL ROW O: " << total_row_O << endl;
 
 
 
@@ -253,14 +253,14 @@ Piece Piezas::gameState()
             column_four_count_O++;
         }
     }
-    cout << "COLUMN ONE COUNT X: " << column_one_count_X << endl;
-    cout << "COLUMN ONE COUNT O: " << column_one_count_O << endl;
-    cout << "COLUMN TWO COUNT X: " << column_two_count_X << endl;
-    cout << "COLUMN TWO COUNT O: " << column_two_count_O << endl;
-    cout << "COLUMN THREE COUNT X: " << column_three_count_X << endl;
-    cout << "COLUMN THREE COUNT O: " << column_three_count_O << endl;
-    cout << "COLUMN FOUR COUNT X: " << column_four_count_X << endl;
-    cout << "COLUMN FOUR COUNT O: " << column_four_count_O << endl;
+    // cout << "COLUMN ONE COUNT X: " << column_one_count_X << endl;
+    // cout << "COLUMN ONE COUNT O: " << column_one_count_O << endl;
+    // cout << "COLUMN TWO COUNT X: " << column_two_count_X << endl;
+    // cout << "COLUMN TWO COUNT O: " << column_two_count_O << endl;
+    // cout << "COLUMN THREE COUNT X: " << column_three_count_X << endl;
+    // cout << "COLUMN THREE COUNT O: " << column_three_count_O << endl;
+    // cout << "COLUMN FOUR COUNT X: " << column_four_count_X << endl;
+    // cout << "COLUMN FOUR COUNT O: " << column_four_count_O << endl;
 
     if (column_three_count_X <= column_one_count_X >= column_two_count_X) {
         if (column_one_count_X >= column_four_count_X) {
@@ -302,14 +302,14 @@ Piece Piezas::gameState()
             total_column_O = column_four_count_O;
         }
     }
-    if ((column_one_count_X == column_two_count_X) && (column_two_count_X == column_three_count_X) && (column_three_count_X == column_four_count_X)) {
-        total_column_X = column_one_count_X;
-    }
-    if ((column_one_count_O == column_two_count_O) && (column_two_count_O == column_three_count_O) && (column_three_count_O == column_four_count_O)) {
-        total_column_O = column_one_count_O;
-    }
-    cout << "TOTAL COLUMN X: " << total_column_X << endl;
-    cout << "TOTAL COLUMN O: " << total_column_O << endl;
+    // if ((column_one_count_X == column_two_count_X) && (column_two_count_X == column_three_count_X) && (column_three_count_X == column_four_count_X)) {
+    //     total_column_X = column_one_count_X;
+    // }
+    // if ((column_one_count_O == column_two_count_O) && (column_two_count_O == column_three_count_O) && (column_three_count_O == column_four_count_O)) {
+    //     total_column_O = column_one_count_O;
+    // }
+    // cout << "TOTAL COLUMN X: " << total_column_X << endl;
+    // cout << "TOTAL COLUMN O: " << total_column_O << endl;
 
     int winner_X = 0;
     int winner_O = 0;
@@ -333,8 +333,8 @@ Piece Piezas::gameState()
         winner_O = total_row_O;
     }
 
-    cout << "Winner X: " << winner_X << endl;
-    cout << "Winner O: " << winner_O << endl;
+    // cout << "Winner X: " << winner_X << endl;
+    // cout << "Winner O: " << winner_O << endl;
 
     if (winner_X > winner_O) {
         return X;
