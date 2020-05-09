@@ -59,7 +59,6 @@ void Piezas::reset()
 **/ 
 Piece Piezas::dropPiece(int column)
 {
-
     if (column > 3 || column < 0) {
          //lose turn
         if (turn == X) {
@@ -103,14 +102,7 @@ Piece Piezas::dropPiece(int column)
 **/
 Piece Piezas::pieceAt(int row, int column)
 {
-    for (int i = 0; i < board.size(); i++) {
-        for (int j = 0; j < board[i].size(); j++) {
-            cout << board[i][j] << ' ';
-        }
-        cout << endl;
-    }
-    cout << endl;
-    
+  
     
     if (row > 2 || row < 0) {
         return Invalid;
@@ -138,6 +130,14 @@ Piece Piezas::pieceAt(int row, int column)
 **/
 Piece Piezas::gameState()
 {
+    for (int i = 0; i < board.size(); i++) {
+        for (int j = 0; j < board[i].size(); j++) {
+            cout << board[i][j] << ' ';
+        }
+        cout << endl;
+    }
+    cout << endl;
+    
     for (int i = 2; i >= 0; i--) {
         for (int j = 0; j < 4; j++) {
             if (board[i][j] == Blank) {
