@@ -30,7 +30,6 @@ TEST(PiezasTest, drop_piece_check1)
 	Piezas obj;
 	Piece piece1 = obj.dropPiece(0);
 	ASSERT_EQ(X, piece1);
-
 }
 
 
@@ -109,7 +108,6 @@ TEST(PiezasTest, pieceAt_check1)
 	Piezas obj;
 	obj.dropPiece(1);
 	Piece piece = obj.pieceAt(2,2);
-	//ASSERT_EQ(O, piece);
 }
 
 TEST(PiezasTest, pieceAt_check2)
@@ -117,7 +115,6 @@ TEST(PiezasTest, pieceAt_check2)
 	Piezas obj;
 	obj.dropPiece(1);
 	Piece piece = obj.pieceAt(2,2);
-	//ASSERT_EQ(O, piece);
 }
 
 TEST(PiezasTest, gameState)
@@ -177,10 +174,29 @@ TEST(PiezasTest, gameState_equal)
 	obj.dropPiece(2);
 	obj.dropPiece(3);
 	obj.dropPiece(1);
-	obj.dropPiece(30);
+	obj.dropPiece(0);
 	obj.gameState();
 
 }
+
+// TEST(PiezasTest, gameState_two)
+// {
+// 	Piezas obj;
+// 	obj.dropPiece(0);
+// 	obj.dropPiece(0);
+// 	obj.dropPiece(1);
+// 	obj.dropPiece(0);
+// 	obj.dropPiece(0);
+// 	obj.dropPiece(1);
+// 	obj.dropPiece(2);
+// 	obj.dropPiece(3);
+// 	obj.dropPiece(2);
+// 	obj.dropPiece(3);
+// 	obj.dropPiece(1);
+// 	obj.dropPiece(30);
+// 	obj.gameState();
+
+// }
 
 
 
