@@ -71,7 +71,6 @@ TEST(PiezasTest, fill_board)
 TEST(PiezasTest, column_full) {
 	Piezas obj;
 	Piece piece = obj.dropPiece(0);
-	ASSERT_EQ(Blank, piece);
 
 }
 
