@@ -92,9 +92,9 @@ Piece Piezas::dropPiece(int column)
             if (turn == O) {
                 turn = X;
             }
+            return Blank;
         }
     }
-    return Blank;
 }
 
 /**
